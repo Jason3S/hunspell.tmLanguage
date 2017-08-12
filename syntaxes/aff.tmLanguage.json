@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "aff",
+	"name": "hunspell",
 	"patterns": [
 		{ "include": "#commands" },
 		{ "include": "#comments" },
@@ -40,18 +40,18 @@
 		"command-string-string": {
 			"patterns": [
 				{
-					"match": "^\\s*(REP|ICONV|OCONV)\\s+(\\d+)\\b",
-					"captures": {
-						"1": { "name": "keyword" },
-						"2": { "name": "constant.numeric" }
-					}
-				},
-				{
 					"match": "^\\s*(REP|ICONV|OCONV)\\s+(\\S+)\\s+(\\S+)",
 					"captures": {
 						"1": { "name": "keyword" },
 						"2": { "name": "string" },
 						"3": { "name": "string" }
+					}
+				},
+				{
+					"match": "^\\s*(REP|ICONV|OCONV)\\s+(\\d+)\\b",
+					"captures": {
+						"1": { "name": "keyword" },
+						"2": { "name": "constant.numeric" }
 					}
 				}
 			]
@@ -230,5 +230,5 @@
 			]
 		}
 	},
-	"scopeName": "source.aff"
+	"scopeName": "source.hunspell.aff"
 }
